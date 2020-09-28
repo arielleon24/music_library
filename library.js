@@ -11,6 +11,7 @@ const library = {
                         name: "Four Thirty-Three",
                         artist: "John Cage",
                         album: "Woodstock 1952"}
+                     
                },
        playlists: { p01: { id: "p01",
                            name: "Coding Music",
@@ -20,7 +21,13 @@ const library = {
                            name: "Other Playlist",
                            tracks: ["t03"]
                          }
-                  }
+                  }, 
+                  printTracks() {
+                     console.log(this.tracks)
+              }, 
+              printPlaylists() {
+                     console.log(this.playlists)
+              }
      };
      
      /////////////////////////////
@@ -132,11 +139,13 @@ const library = {
                 }
          }
          const returnedTarget = Object.assign(library.playlists, p03)
-       console.log(library.playlists) 
+       // console.log(library.playlists) 
      
      }
 
      addPlaylist("Musica de locos")
+     library.printTracks();
+     library.printPlaylists();
      
      // STRETCH:
      // given a query string string, prints a list of tracks
